@@ -450,3 +450,38 @@ Visit https://react.dev/link/error-boundaries to learn more about error boundari
 10:45:29 AM [vite] (client) hmr update /src/index.css, /src/pages/WarehousePage.jsx
 10:45:45 AM [vite] (client) hmr update /src/index.css, /src/pages/WarehousePage.jsx
 10:47:24 AM [vite] (client) hmr update /src/index.css, /src/pages/DealerDashboard.jsx
+10:56:59 AM [vite] (client) [console.error] Stats unavailable: AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+10:56:59 AM [vite] (client) [console.error] Stats unavailable: AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+10:57:35 AM [vite] (client) [console.error] Stats unavailable: AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+10:57:35 AM [vite] (client) [console.error] Stats unavailable: AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+11:00:36 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx, /src/pages/DealerDashboard.jsx, /src/pages/OfficerDashboard.jsx, /src/pages/GovDashboard.jsx, /src/pages/WarehousePage.jsx, /src/pages/TransportPage.jsx, /src/context/AuthContext.jsx
+11:00:37 AM [vite] (client) hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+11:00:37 AM [vite] (client) hmr update /src/App.jsx, /src/pages/Login.jsx, /src/pages/Register.jsx, /src/pages/DealerDashboard.jsx, /src/components/Navbar.jsx, /src/components/DeccanWallet.jsx, /src/pages/FarmerDashboard.jsx
+11:00:49 AM [vite] (client) hmr update /src/index.css, /src/context/AuthContext.jsx
+11:01:04 AM [vite] (client) hmr update /src/index.css, /src/context/AuthContext.jsx
+11:01:42 AM [vite] http proxy error: /api/crops/3/verify?status=verified&notes=Quality+approved
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+11:01:42 AM [vite] http proxy error: /api/crops/3/verify?status=verified&notes=Quality+approved
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+11:01:42 AM [vite] http proxy error: /api/warehouse/
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+11:01:42 AM [vite] http proxy error: /api/crops/?farmer_id=4
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+11:01:42 AM [vite] http proxy error: /api/crops/?status=pending_verification
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+11:01:42 AM [vite] http proxy error: /api/crops/?status=verified
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)

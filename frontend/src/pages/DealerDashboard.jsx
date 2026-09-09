@@ -5,18 +5,75 @@ import DeccanWallet from '../components/DeccanWallet';
 import { useAuth } from '../context/AuthContext';
 import { useLang } from '../context/LanguageContext';
 import { auctions as auctionsApi, escrow as escrowApi } from '../api';
-import { Gavel, Timer, Zap, Trophy, MapPin, X, CheckCircle, AlertTriangle, Shield, Wallet, RefreshCw } from 'lucide-react';
+import { Gavel, Timer, Zap, Trophy, MapPin, X, CheckCircle, AlertTriangle, Shield, Wallet, RefreshCw, TrendingUp, User } from 'lucide-react';
 
 const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
 
-const CROP_PLACEHOLDERS = {
+const CROP_IMAGES = {
   'Wheat': 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&h=400&fit=crop',
+  'Cotton': 'https://images.unsplash.com/photo-1605001011156-cbf0b0f67a51?w=600&h=400&fit=crop',
+  'Rice': 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&h=400&fit=crop',
   'default': 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&h=400&fit=crop',
 };
 
 const getFloor = (basePrice) => parseFloat((basePrice * 1.15).toFixed(2));
 const getMaxBid = (currentBid) => parseFloat((currentBid * 1.20).toFixed(2));
 const ESCROW_FEE_RATE = 0.15;
+
+function BidFeed({ auctionId }) {
+  const [bids, setBids] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const prevCount = useRef(0);
+
+  const fetchBids = useCallback(async () => {
+    try {
+      const { data } = await auctionsApi.bids(auctionId);
+      setBids(data);
+      prevCount.current = data.length;
+    } catch {}
+    setLoading(false);
+  }, [auctionId]);
+
+  useEffect(() => { fetchBids(); }, [fetchBids]);
+  useEffect(() => { const iv = setInterval(fetchBids, 2000); return () => clearInterval(iv); }, [fetchBids]);
+
+  if (loading && bids.length === 0) return null;
+
+  return (
+    <div className="mt-2 mb-1">
+      <div className="flex items-center gap-1 text-[10px] font-bold text-gray-500 mb-1 uppercase tracking-wide">
+        <TrendingUp className="w-3 h-3" /> Bid Activity
+      </div>
+      <div className="max-h-28 overflow-y-auto space-y-1 scrollbar-thin">
+        <AnimatePresence initial={false}>
+          {bids.slice(0, 8).map((bid, i) => (
+            <motion.div
+              key={bid.id}
+              initial={{ opacity: 0, x: -20, height: 0 }}
+              animate={{ opacity: 1, x: 0, height: 'auto' }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.3 }}
+              className={`flex items-center justify-between px-2 py-1 rounded-lg text-xs ${i === 0 ? 'bg-green-50 border border-green-200' : 'bg-gray-50'}`}
+            >
+              <div className="flex items-center gap-1.5">
+                <div className={`w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-bold ${i === 0 ? 'bg-green-500 text-white' : 'bg-gray-300 text-white'}`}>
+                  <User className="w-3 h-3" />
+                </div>
+                <span className={`font-medium ${i === 0 ? 'text-green-700' : 'text-gray-600'}`}>
+                  {bid.buyer_name || `Buyer #${bid.buyer_id}`}
+                </span>
+              </div>
+              <span className={`font-bold ${i === 0 ? 'text-green-700' : 'text-gray-500'}`}>
+                ₹{bid.amount.toFixed(0)}
+              </span>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+        {bids.length === 0 && <p className="text-[10px] text-gray-400 text-center py-1">No bids yet</p>}
+      </div>
+    </div>
+  );
+}
 
 function BiddingTicker({ auction }) {
   const floor = getFloor(auction.base_price);
@@ -94,6 +151,7 @@ export default function DealerDashboard() {
   const [bidLoading, setBidLoading] = useState(false);
   const [escrowState, setEscrowState] = useState({});
   const [releaseState, setReleaseState] = useState({});
+  const [expandedFeed, setExpandedFeed] = useState(null);
 
   const fetchAuctions = useCallback(async () => {
     try {
@@ -123,7 +181,7 @@ export default function DealerDashboard() {
     if (bidAmt < floor) return `Bid must be at least ₹${floor} (15% floor)`;
     if (bidAmt <= auction.highest_bid) return `Must be higher than ₹${auction.highest_bid.toFixed(2)}`;
     const maxBid = getMaxBid(auction.highest_bid);
-    if (bidAmt > maxBid) return `Max allowed is ₹{maxBid} (20% above current)`;
+    if (bidAmt > maxBid) return `Max allowed is ₹${maxBid} (20% above current)`;
     return '';
   };
 
@@ -216,12 +274,12 @@ export default function DealerDashboard() {
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {auctions.map((auction, i) => {
-                  const image = auction.image_url || CROP_PLACEHOLDERS.default;
-                  const isHighest = userHighest[auction.auction_id];
+                  const image = auction.image_url || CROP_IMAGES[auction.crop_name] || CROP_IMAGES.default;
+                  const isHighest = auction.highest_bidder_id === user?.id;
                   return (
                     <motion.div key={auction.auction_id} initial="hidden" animate="visible" variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { delay: i * 0.05 } } }} className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                       <div className="relative h-44 overflow-hidden">
-                        <img src={image} alt={auction.crop_name} className="w-full h-full object-cover" loading="lazy" onError={(e) => { e.target.src = CROP_PLACEHOLDERS.default; }} />
+                        <img src={image} alt={auction.crop_name} className="w-full h-full object-cover" loading="lazy" onError={(e) => { e.target.src = CROP_IMAGES.default; }} />
                         <span className="absolute top-3 left-3 text-xs font-bold px-2 py-1 rounded-lg border shadow-sm bg-green-100 text-green-700 border-green-300 flex items-center gap-1">
                           <Zap className="w-3 h-3" /> LIVE
                         </span>
@@ -238,13 +296,19 @@ export default function DealerDashboard() {
                             <h3 className="font-bold text-lg">{auction.crop_name}</h3>
                             <p className="text-xs text-gray-400">Farmer: {auction.farmer_name}</p>
                           </div>
-                          <p className="text-xl font-extrabold text-green-700">₹{auction.highest_bid.toFixed(2)}<span className="text-xs text-gray-500 font-normal">/unit</span></p>
+                          <motion.p key={auction.highest_bid} initial={{ scale: 1.3, color: '#16a34a' }} animate={{ scale: 1 }} className="text-xl font-extrabold text-green-700">₹{auction.highest_bid.toFixed(0)}<span className="text-xs text-gray-500 font-normal">/unit</span></motion.p>
                         </div>
                         <p className="text-sm text-gray-500 flex items-center gap-1 mb-2"><MapPin className="w-3 h-3" /> {auction.location}</p>
 
                         <BiddingTicker auction={auction} />
 
-                        <button onClick={() => { setShowBidModal(auction.auction_id); setBidError(''); setBidAmounts((a) => ({ ...a, [auction.auction_id]: '' })); }} className="w-full bg-green-600 text-white py-2.5 rounded-xl font-bold text-sm hover:bg-green-700 flex items-center justify-center gap-1">
+                        <button onClick={() => setExpandedFeed(expandedFeed === auction.auction_id ? null : auction.auction_id)} className="text-[10px] text-gray-400 hover:text-gray-600 mb-1 flex items-center gap-1">
+                          <TrendingUp className="w-3 h-3" />
+                          {expandedFeed === auction.auction_id ? 'Hide' : 'Show'} bid activity
+                        </button>
+                        {expandedFeed === auction.auction_id && <BidFeed auctionId={auction.auction_id} />}
+
+                        <button onClick={() => { setShowBidModal(auction.auction_id); setBidError(''); setBidAmounts((a) => ({ ...a, [auction.auction_id]: '' })); }} className="w-full bg-green-600 text-white py-2.5 rounded-xl font-bold text-sm hover:bg-green-700 flex items-center justify-center gap-1 mt-1">
                           <Gavel className="w-4 h-4" /> Place Bid
                         </button>
                       </div>
@@ -324,7 +388,7 @@ export default function DealerDashboard() {
           const isValid = bidAmt > 0 && !err && !bidLoading;
           return (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={() => setShowBidModal(null)}>
-              <motion.div initial="hidden" animate="visible" variants={fadeUp} onClick={(e) => e.stopPropagation()} className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-sm">
+              <motion.div initial="hidden" animate="visible" variants={fadeUp} onClick={(e) => e.stopPropagation()} className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md">
                 <div className="flex justify-between items-center mb-4">
                   <h3 className="font-bold text-lg">Place Your Bid</h3>
                   <button onClick={() => setShowBidModal(null)}><X className="w-5 h-5" /></button>
@@ -340,6 +404,8 @@ export default function DealerDashboard() {
                 </div>
 
                 <BiddingTicker auction={auction} />
+
+                <BidFeed auctionId={auction.auction_id} />
 
                 <div className="mb-4">
                   <AuctionTimer timerEnd={auction.timer_end} />

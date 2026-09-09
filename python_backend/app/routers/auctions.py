@@ -222,6 +222,14 @@ def place_bid(
 
 @router.get("/{auction_id}/bids", response_model=List[AuctionBidResponse])
 def get_auction_bids(auction_id: int, db: Session = Depends(get_db)):
-    return db.query(AuctionBid).filter(
+    from ..models.models import User
+    bids = db.query(AuctionBid).filter(
         AuctionBid.auction_id == auction_id
     ).order_by(AuctionBid.amount.desc()).all()
+    result = []
+    for bid in bids:
+        buyer = db.query(User).filter(User.id == bid.buyer_id).first()
+        bid_dict = AuctionBidResponse.model_validate(bid)
+        bid_dict.buyer_name = buyer.name if buyer else None
+        result.append(bid_dict)
+    return result

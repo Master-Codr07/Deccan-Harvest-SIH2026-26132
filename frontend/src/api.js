@@ -3,8 +3,8 @@ import axios from 'axios';
 const API = axios.create({ baseURL: '/api' });
 
 API.interceptors.request.use((config) => {
-  const token = sessionStorage.getItem('dh_token');
-  if (token && !token.startsWith('mock_')) config.headers.Authorization = `Bearer ${token}`;
+  const token = localStorage.getItem('dh_token');
+  if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
 
@@ -16,8 +16,8 @@ API.interceptors.response.use(
       const msg = (err.response?.data?.detail || '').toLowerCase();
       const isTokenError = msg.includes('token') || msg.includes('signature') || msg.includes('expired') || msg.includes('not authenticated');
       if (isTokenError) {
-        sessionStorage.removeItem('dh_token');
-        sessionStorage.removeItem('dh_user');
+        localStorage.removeItem('dh_token');
+        localStorage.removeItem('dh_user');
         if (window.location.pathname !== '/login' && window.location.pathname !== '/') {
           window.location.href = '/login?expired=1';
         }
@@ -30,6 +30,7 @@ API.interceptors.response.use(
 export const auth = {
   register: (data) => API.post('/auth/register', data),
   login: (data) => API.post('/auth/login', data),
+  me: () => API.get('/auth/me'),
   verifyRationCard: (cardNumber) => API.post('/auth/verify-ration-card', null, { params: { card_number: cardNumber } }),
   sendOtp: (phone) => API.post('/auth/otp/send', { phone }),
   verifyOtp: (phone, otp) => API.post('/auth/otp/verify', { phone, otp }),

@@ -11,6 +11,7 @@ from ..models.models import User, UserRole, OTPVerification
 from ..schemas.schemas import UserCreate, UserResponse, LoginRequest, Token, OTPRequest, OTPVerify
 from ..config import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES
 from ..services.kyc_service import validate_ration_card
+from ..auth import get_current_user
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -112,3 +113,8 @@ def verify_ration_card_endpoint(card_number: str):
     if not result["valid"]:
         raise HTTPException(status_code=400, detail=result["error"])
     return result
+
+
+@router.get("/me", response_model=UserResponse)
+def get_me(current_user: User = Depends(get_current_user)):
+    return current_user

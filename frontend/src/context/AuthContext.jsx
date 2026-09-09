@@ -3,31 +3,48 @@ import { auth as authApi } from '../api';
 
 const AuthContext = createContext(null);
 
+const STORAGE_USER = 'dh_user';
+const STORAGE_TOKEN = 'dh_token';
+
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const savedUser = sessionStorage.getItem('dh_user');
-    const savedToken = sessionStorage.getItem('dh_token');
-    if (savedUser && savedToken) {
-      try {
-        setUser(JSON.parse(savedUser));
-        setToken(savedToken);
-      } catch {
-        sessionStorage.removeItem('dh_user');
-        sessionStorage.removeItem('dh_token');
-      }
+    const savedUser = localStorage.getItem(STORAGE_USER);
+    const savedToken = localStorage.getItem(STORAGE_TOKEN);
+    if (!savedUser || !savedToken) {
+      setLoading(false);
+      return;
     }
-    setLoading(false);
+    try {
+      const parsed = JSON.parse(savedUser);
+      setUser(parsed);
+      setToken(savedToken);
+    } catch {
+      localStorage.removeItem(STORAGE_USER);
+      localStorage.removeItem(STORAGE_TOKEN);
+      setLoading(false);
+      return;
+    }
+    authApi.me().then(({ data }) => {
+      const synced = { ...data, wallet_balance: data.wallet_balance ?? 0 };
+      localStorage.setItem(STORAGE_USER, JSON.stringify(synced));
+      setUser(synced);
+    }).catch(() => {
+      localStorage.removeItem(STORAGE_USER);
+      localStorage.removeItem(STORAGE_TOKEN);
+      setToken(null);
+      setUser(null);
+    }).finally(() => setLoading(false));
   }, []);
 
   const loginUser = (userData, realToken) => {
     const userWithWallet = { ...userData, wallet_balance: userData.wallet_balance ?? 0 };
     if (realToken) {
-      sessionStorage.setItem('dh_user', JSON.stringify(userWithWallet));
-      sessionStorage.setItem('dh_token', realToken);
+      localStorage.setItem(STORAGE_USER, JSON.stringify(userWithWallet));
+      localStorage.setItem(STORAGE_TOKEN, realToken);
       setToken(realToken);
     }
     setUser(userWithWallet);
@@ -50,13 +67,13 @@ export function AuthProvider({ children }) {
   const updateWallet = (amount) => {
     if (!user) return;
     const updated = { ...user, wallet_balance: amount };
-    sessionStorage.setItem('dh_user', JSON.stringify(updated));
+    localStorage.setItem(STORAGE_USER, JSON.stringify(updated));
     setUser(updated);
   };
 
   const logout = () => {
-    sessionStorage.removeItem('dh_user');
-    sessionStorage.removeItem('dh_token');
+    localStorage.removeItem(STORAGE_USER);
+    localStorage.removeItem(STORAGE_TOKEN);
     setToken(null);
     setUser(null);
   };

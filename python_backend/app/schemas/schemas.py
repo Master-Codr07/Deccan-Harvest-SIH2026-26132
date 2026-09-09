@@ -117,6 +117,7 @@ class AuctionBidResponse(BaseModel):
     status: str
     auction_id: int
     buyer_id: int
+    buyer_name: Optional[str] = None
     created_at: datetime
 
     class Config:
