@@ -1,0 +1,456 @@
+INFO:     Will watch for changes in these directories: ['/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [96491] using StatReload
+INFO:     Started server process [96494]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Agmarknet API failed, using fallback data: Redirect response '302 Found : Moved Temporarily' for url 'https://data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+Redirect location: 'https://www.data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302
+INFO:     127.0.0.1:56652 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56656 - "POST /api/auth/login HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column users.ration_card_number does not exist
+LINE 1: ...s_location, users.avatar_url AS users_avatar_url, users.rati...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 354, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/app/routers/auth.py", line 61, in login
+    user = db.query(User).filter(User.email == credentials.email).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2766, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2864, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2373, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2271, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1421, in execute
+    return meth(
+           ^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column users.ration_card_number does not exist
+LINE 1: ...s_location, users.avatar_url AS users_avatar_url, users.rati...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.role AS users_role, users.location AS users_location, users.avatar_url AS users_avatar_url, users.ration_card_number AS users_ration_card_number, users.ration_card_verified AS users_ration_card_verified, users.wallet_balance AS users_wallet_balance, users.is_verified AS users_is_verified, users.is_active AS users_is_active, users.created_at AS users_created_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'farmer@demo.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+INFO:     127.0.0.1:56659 - "POST /api/auth/login HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column users.ration_card_number does not exist
+LINE 1: ...s_location, users.avatar_url AS users_avatar_url, users.rati...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/fastapi/routing.py", line 354, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/starlette/concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/app/routers/auth.py", line 61, in login
+    user = db.query(User).filter(User.email == credentials.email).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2766, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2864, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2373, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2271, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1421, in execute
+    return meth(
+           ^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column users.ration_card_number does not exist
+LINE 1: ...s_location, users.avatar_url AS users_avatar_url, users.rati...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.role AS users_role, users.location AS users_location, users.avatar_url AS users_avatar_url, users.ration_card_number AS users_ration_card_number, users.ration_card_verified AS users_ration_card_verified, users.wallet_balance AS users_wallet_balance, users.is_verified AS users_is_verified, users.is_active AS users_is_active, users.created_at AS users_created_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'farmer@demo.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+INFO:     127.0.0.1:56666 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56669 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/python_backend/venv/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:     127.0.0.1:56673 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56676 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56678 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56684 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56684 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56714 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56715 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56713 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56719 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56726 - "POST /api/ml/assess-quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56735 - "POST /api/crops/ HTTP/1.1" 401 Unauthorized
+Agmarknet API failed, using fallback data: Redirect response '302 Found : Moved Temporarily' for url 'https://data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+Redirect location: 'https://www.data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302
+Agmarknet API failed, using fallback data: Redirect response '302 Found : Moved Temporarily' for url 'https://data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+Redirect location: 'https://www.data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302
+Agmarknet API failed, using fallback data: Redirect response '302 Found : Moved Temporarily' for url 'https://data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+Redirect location: 'https://www.data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302
+INFO:     127.0.0.1:64634 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64633 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64632 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64638 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64656 - "POST /api/crops/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64686 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64687 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64685 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64691 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64704 - "GET /api/dashboard/stats HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64712 - "GET /api/dashboard/stats HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64707 - "GET /api/crops/?status=verified HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64705 - "GET /api/crops/?status=pending_verification HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64721 - "GET /api/crops/?status=verified HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64722 - "GET /api/crops/?status=pending_verification HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64708 - "GET /api/auctions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64736 - "GET /api/auctions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64745 - "GET /api/dashboard/stats HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64743 - "GET /api/crops/?status=verified HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64744 - "GET /api/auctions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64742 - "GET /api/crops/?status=pending_verification HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64753 - "GET /api/dashboard/stats HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64757 - "GET /api/auctions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64756 - "GET /api/crops/?status=verified HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64761 - "GET /api/crops/?status=pending_verification HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64781 - "GET /api/dashboard/stats HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64783 - "GET /api/dashboard/recent-activity HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64782 - "GET /api/dashboard/supply-forecast HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64787 - "GET /api/dashboard/stats HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64789 - "GET /api/dashboard/supply-forecast HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64788 - "GET /api/dashboard/recent-activity HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64825 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64826 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64823 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64830 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64841 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64842 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64838 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64846 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64852 - "POST /api/crops/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65017 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65019 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65016 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65023 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65358 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65360 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65361 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65362 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65359 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65367 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65371 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65375 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65400 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65401 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65405 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65404 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65399 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65407 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65411 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65415 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65438 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65439 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65440 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65441 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65437 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65443 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65447 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65451 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65473 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65474 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65476 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65475 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65472 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65478 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65482 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65486 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65509 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65508 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65510 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65511 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65507 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65513 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65517 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65521 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49156 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49157 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49155 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49163 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49162 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49165 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49167 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49171 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49193 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49194 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49196 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49195 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49192 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49198 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49202 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49206 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49230 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49229 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49227 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49228 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49226 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49232 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49236 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49240 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49262 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49263 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49264 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49265 - "POST /api/ml/predict-price HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49261 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49267 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49271 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49275 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "POST /api/ml/assess-quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49295 - "POST /api/crops/ HTTP/1.1" 401 Unauthorized
+Agmarknet API failed, using fallback data: Redirect response '302 Found : Moved Temporarily' for url 'https://data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+Redirect location: 'https://www.data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302
+INFO:     127.0.0.1:49400 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49404 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49410 - "POST /api/ml/assess-quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49416 - "POST /api/crops/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:49432 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49436 - "GET /api/crops/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49440 - "POST /api/crops/ HTTP/1.1" 401 Unauthorized
+WARNING:  StatReload detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [96494]
+INFO:     Started server process [9403]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Agmarknet API failed, using fallback data: Redirect response '302 Found : Moved Temporarily' for url 'https://data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+Redirect location: 'https://www.data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302
+WARNING:  StatReload detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9403]
+INFO:     Started server process [9577]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Agmarknet API failed, using fallback data: Redirect response '302 Found : Moved Temporarily' for url 'https://data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+Redirect location: 'https://www.data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302
+WARNING:  StatReload detected changes in 'app/schemas/schemas.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9577]
+INFO:     Started server process [10016]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Agmarknet API failed, using fallback data: Redirect response '302 Found : Moved Temporarily' for url 'https://data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+Redirect location: 'https://www.data.gov.in/backend/dmspublic/v1/resources?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&limit=50'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10016]
+INFO:     Stopping reloader process [96491]

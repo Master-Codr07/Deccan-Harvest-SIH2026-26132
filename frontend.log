@@ -1,0 +1,452 @@
+
+  VITE v8.2.2  ready in 132 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://10.215.133.251:5173/  en0
+4:09:41 AM [vite] (client) hmr update /src/index.css, /src/pages/Register.jsx, /src/pages/FarmerDashboard.jsx, /src/pages/DealerDashboard.jsx, /src/pages/OfficerDashboard.jsx, /src/pages/GovDashboard.jsx, /src/pages/WarehousePage.jsx, /src/pages/TransportPage.jsx
+8:00:40 AM [vite] (client) [console.error] AxiosError: Request failed with status code 401
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788907181101:36:47)
+8:00:40 AM [vite] (client) [console.error] AxiosError: Request failed with status code 401
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788907181101:36:47)
+8:00:43 AM [vite] (client) [console.error] AxiosError: Request failed with status code 401
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788907181101:36:47)
+8:00:43 AM [vite] (client) [console.error] AxiosError: Request failed with status code 401
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788907181101:36:47)
+8:00:46 AM [vite] (client) [console.error] AxiosError: Request failed with status code 401
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 0)
+    at async loadData (http://localhost:5173/src/pages/GovDashboard.jsx?t=1788907181101:39:22)
+8:00:46 AM [vite] (client) [console.error] AxiosError: Request failed with status code 401
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 0)
+    at async loadData (http://localhost:5173/src/pages/GovDashboard.jsx?t=1788907181101:39:22)
+8:06:34 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+8:06:34 AM [vite] (client) [Unhandled error] ReferenceError: MarketTicker is not defined
+ > FarmerDashboard src/pages/FarmerDashboard.jsx:133:9
+    131 |          </div>
+    132 |  
+    133 |          <MarketTicker />
+        |           ^
+    134 |  
+    135 |          {prediction && (
+ > Object.react_stack_bottom_frame node_modules/react-dom/cjs/react-dom-client.development.js:25904:19
+ > renderWithHooks node_modules/react-dom/cjs/react-dom-client.development.js:7662:21
+ > updateFunctionComponent node_modules/react-dom/cjs/react-dom-client.development.js:10166:18
+ > beginWork node_modules/react-dom/cjs/react-dom-client.development.js:11778:17
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:871:29
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:17641:21
+ > workLoopSync node_modules/react-dom/cjs/react-dom-client.development.js:17469:40
+ > renderRootSync node_modules/react-dom/cjs/react-dom-client.development.js:17450:10
+ > performWorkOnRoot node_modules/react-dom/cjs/react-dom-client.development.js:16583:34
+
+8:06:34 AM [vite] (client) [console.warn] An error occurred in the <FarmerDashboard> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+
+8:06:51 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+8:10:49 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+8:11:01 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+8:11:37 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+8:11:52 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+8:13:55 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+8:15:16 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+8:15:25 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+8:23:08 AM [vite] (client) hmr update /src/index.css, /src/pages/Register.jsx, /src/pages/FarmerDashboard.jsx, /src/pages/DealerDashboard.jsx, /src/pages/OfficerDashboard.jsx, /src/pages/GovDashboard.jsx, /src/pages/WarehousePage.jsx, /src/pages/TransportPage.jsx
+8:23:30 AM [vite] (client) hmr update /src/index.css, /src/pages/Register.jsx, /src/pages/FarmerDashboard.jsx, /src/pages/DealerDashboard.jsx, /src/pages/OfficerDashboard.jsx, /src/pages/GovDashboard.jsx, /src/pages/WarehousePage.jsx, /src/pages/TransportPage.jsx
+8:26:52 AM [vite] (client) hmr update /src/index.css, /src/context/AuthContext.jsx
+8:26:52 AM [vite] (client) hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+8:26:52 AM [vite] (client) hmr update /src/App.jsx, /src/pages/Login.jsx, /src/pages/Register.jsx, /src/pages/DealerDashboard.jsx, /src/components/Navbar.jsx, /src/components/DeccanWallet.jsx
+8:27:06 AM [vite] (client) hmr update /src/index.css, /src/pages/Login.jsx
+8:27:43 AM [vite] (client) hmr update /src/index.css, /src/pages/Register.jsx
+8:52:20 AM [vite] (client) hmr update /src/index.css, /src/pages/Register.jsx, /src/pages/FarmerDashboard.jsx, /src/pages/DealerDashboard.jsx, /src/pages/OfficerDashboard.jsx, /src/pages/GovDashboard.jsx, /src/pages/WarehousePage.jsx, /src/pages/TransportPage.jsx, /src/context/AuthContext.jsx
+8:52:20 AM [vite] (client) hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+8:52:20 AM [vite] (client) hmr update /src/App.jsx, /src/pages/Login.jsx, /src/pages/Register.jsx, /src/pages/DealerDashboard.jsx, /src/components/Navbar.jsx, /src/components/DeccanWallet.jsx
+8:53:55 AM [vite] (client) hmr update /src/index.css, /src/pages/DealerDashboard.jsx
+8:55:09 AM [vite] http proxy error: /api/auctions/live
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1430:18)
+    at afterConnectMultiple (node:net:2099:7)
+8:55:09 AM [vite] (client) [console.error] Failed to load auctions: AxiosError: Request failed with status code 502
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+9:13:09 AM [vite] (client) hmr update /src/index.css, /src/pages/Register.jsx, /src/pages/FarmerDashboard.jsx, /src/pages/OfficerDashboard.jsx, /src/pages/TransportPage.jsx
+9:13:09 AM [vite] (client) [Unhandled error] TypeError: Cannot destructure property 'user' of 'useAuth(...)' as it is null.
+ > AppRoutes src/App.jsx?t=1788922663200:37:10
+ > Object.react_stack_bottom_frame node_modules/react-dom/cjs/react-dom-client.development.js:25904:19
+ > renderWithHooks node_modules/react-dom/cjs/react-dom-client.development.js:7662:21
+ > updateFunctionComponent node_modules/react-dom/cjs/react-dom-client.development.js:10166:18
+ > beginWork node_modules/react-dom/cjs/react-dom-client.development.js:11778:17
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:871:29
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:17641:21
+ > workLoopSync node_modules/react-dom/cjs/react-dom-client.development.js:17469:40
+ > renderRootSync node_modules/react-dom/cjs/react-dom-client.development.js:17450:10
+ > performWorkOnRoot node_modules/react-dom/cjs/react-dom-client.development.js:16583:34
+
+9:13:09 AM [vite] (client) [console.warn] An error occurred in the <AppRoutes> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+
+9:13:41 AM [vite] (client) hmr update /src/index.css, /src/pages/Register.jsx, /src/pages/FarmerDashboard.jsx, /src/pages/DealerDashboard.jsx, /src/pages/OfficerDashboard.jsx, /src/pages/GovDashboard.jsx, /src/pages/WarehousePage.jsx, /src/pages/TransportPage.jsx, /src/context/AuthContext.jsx
+9:13:41 AM [vite] (client) hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+9:13:41 AM [vite] (client) hmr update /src/App.jsx, /src/pages/Login.jsx, /src/pages/Register.jsx, /src/pages/DealerDashboard.jsx, /src/components/Navbar.jsx, /src/components/DeccanWallet.jsx
+9:13:42 AM [vite] (client) [console.error] AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788925421946:36:47)
+9:13:42 AM [vite] (client) [console.error] AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788925421946:36:47)
+9:13:42 AM [vite] (client) [console.error] AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788925421946:36:47)
+9:13:42 AM [vite] (client) [console.error] AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788925421946:36:47)
+9:14:32 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+9:15:02 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+9:28:35 AM [vite] (client) hmr update /src/index.css, /src/context/AuthContext.jsx
+9:28:36 AM [vite] Internal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/context/AuthContext.jsx:69:20 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m69 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249m_[0m[38;5;249mv[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mi[0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249me[0m[38;5;249md[0m[38;5;249m:[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mr[0m[38;5;249mu[0m[38;5;249me[0m[38;5;249m,[0m
+ [38;5;240m   │[0m                    │ 
+ [38;5;240m   │[0m                    ╰─ 
+ [38;5;240m   │[0m 
+ [38;5;240m   │[0m [38;5;115mHelp[0m: Try inserting a semicolon here
+[38;5;246m────╯[0m
+
+  Plugin: vite:oxc
+  File: /Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/frontend/src/context/AuthContext.jsx
+      at transformWithOxc (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:4103:19)
+      at TransformPluginContext.transform (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:4174:26)
+      at EnvironmentPluginContainer.transform (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:30932:51)
+      at async loadAndTransform (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:20671:26)
+      at async viteTransformMiddleware (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:25205:20)
+9:28:36 AM [vite] Internal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/context/AuthContext.jsx:69:20 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m69 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249m_[0m[38;5;249mv[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mi[0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249me[0m[38;5;249md[0m[38;5;249m:[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mr[0m[38;5;249mu[0m[38;5;249me[0m[38;5;249m,[0m
+ [38;5;240m   │[0m                    │ 
+ [38;5;240m   │[0m                    ╰─ 
+ [38;5;240m   │[0m 
+ [38;5;240m   │[0m [38;5;115mHelp[0m: Try inserting a semicolon here
+[38;5;246m────╯[0m
+
+  Plugin: vite:oxc
+  File: /Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/frontend/src/context/AuthContext.jsx
+      at transformWithOxc (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:4103:19)
+      at TransformPluginContext.transform (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:4174:26)
+      at EnvironmentPluginContainer.transform (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:30932:51)
+      at async loadAndTransform (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:20671:26)
+      at async viteTransformMiddleware (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:25205:20)
+9:28:36 AM [vite] (client) [console.error] [vite] Failed to reload /src/context/AuthContext.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+9:28:36 AM [vite] (client) [console.error] [vite] Failed to reload /src/context/AuthContext.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+9:28:36 AM [vite] Internal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/context/AuthContext.jsx:69:20 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m69 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249m_[0m[38;5;249mv[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mi[0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249me[0m[38;5;249md[0m[38;5;249m:[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mr[0m[38;5;249mu[0m[38;5;249me[0m[38;5;249m,[0m
+ [38;5;240m   │[0m                    │ 
+ [38;5;240m   │[0m                    ╰─ 
+ [38;5;240m   │[0m 
+ [38;5;240m   │[0m [38;5;115mHelp[0m: Try inserting a semicolon here
+[38;5;246m────╯[0m
+
+  Plugin: vite:oxc
+  File: /Users/kaushikakshara/Documents/sih folder /Deccan-Harvest-SIH2026-26132/frontend/src/context/AuthContext.jsx
+      at transformWithOxc (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:4103:19)
+      at TransformPluginContext.transform (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:4174:26)
+      at EnvironmentPluginContainer.transform (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:30932:51)
+      at async loadAndTransform (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:20671:26)
+      at async viteTransformMiddleware (file:///Users/kaushikakshara/Documents/sih%20folder%20/Deccan-Harvest-SIH2026-26132/frontend/node_modules/vite/dist/node/chunks/node.js:25205:20)
+9:28:36 AM [vite] (client) [console.error] [vite] Failed to reload /src/context/AuthContext.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+9:32:40 AM [vite] (client) hmr update /src/index.css, /src/context/AuthContext.jsx
+9:32:40 AM [vite] (client) hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+9:32:40 AM [vite] (client) hmr update /src/App.jsx, /src/pages/Login.jsx, /src/pages/Register.jsx, /src/pages/DealerDashboard.jsx, /src/components/Navbar.jsx, /src/components/DeccanWallet.jsx
+9:36:58 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+9:38:18 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+9:38:42 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+9:45:43 AM [vite] (client) hmr update /src/index.css, /src/context/AuthContext.jsx
+9:45:43 AM [vite] (client) hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+9:45:43 AM [vite] (client) hmr update /src/App.jsx, /src/pages/Login.jsx, /src/pages/Register.jsx, /src/pages/DealerDashboard.jsx, /src/components/Navbar.jsx, /src/components/DeccanWallet.jsx
+9:45:43 AM [vite] (client) [console.error] AxiosError: Request failed with status code 401
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788927343268:36:47)
+9:45:43 AM [vite] (client) [console.error] AxiosError: Request failed with status code 401
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788927343268:36:47)
+9:46:11 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:13 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:14 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:15 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:15 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:15 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:15 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:15 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:15 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:16 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:16 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:16 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:18 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:18 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:18 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:32 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:32 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:46:33 AM [vite] (client) [console.error] TypeError: mockRegister is not a function
+    at handleSubmit (http://localhost:5173/src/pages/Register.jsx?t=1788927343268:63:25)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9141:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:851:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9167:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9454:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:2044:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:9240:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11319:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=cc907c10:11301:56)
+9:47:42 AM [vite] (client) hmr update /src/index.css, /src/pages/Login.jsx
+9:50:21 AM [vite] (client) hmr update /src/index.css, /src/pages/Login.jsx
+9:51:20 AM [vite] (client) hmr update /src/index.css, /src/pages/Register.jsx
+10:09:57 AM [vite] (client) hmr update /src/App.jsx, /src/index.css
+10:09:57 AM [vite] (client) [console.error] AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788927343268:36:47)
+10:09:57 AM [vite] (client) [console.error] AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+    at Axios$1.request (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:3391:37)
+    at async Promise.all (index 3)
+    at async loadData (http://localhost:5173/src/pages/OfficerDashboard.jsx?t=1788927343268:36:47)
+10:10:06 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+10:10:13 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+10:10:18 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+10:10:26 AM [vite] (client) hmr update /src/index.css, /src/pages/OfficerDashboard.jsx
+10:10:39 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx, /src/pages/DealerDashboard.jsx, /src/pages/OfficerDashboard.jsx, /src/pages/GovDashboard.jsx, /src/pages/WarehousePage.jsx, /src/pages/TransportPage.jsx, /src/context/AuthContext.jsx
+10:10:39 AM [vite] (client) hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:10:39 AM [vite] (client) hmr update /src/App.jsx, /src/pages/Login.jsx, /src/pages/Register.jsx, /src/pages/DealerDashboard.jsx, /src/components/Navbar.jsx, /src/components/DeccanWallet.jsx, /src/pages/FarmerDashboard.jsx
+10:10:39 AM [vite] (client) [console.error] Stats unavailable: AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+10:10:39 AM [vite] (client) [console.error] Stats unavailable: AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+10:10:39 AM [vite] (client) [console.error] Stats unavailable: AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+10:10:39 AM [vite] (client) [console.error] Stats unavailable: AxiosError: Request failed with status code 403
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+10:14:54 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx
+10:25:15 AM [vite] (client) hmr update /src/index.css, /src/context/AuthContext.jsx
+10:25:15 AM [vite] (client) hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:25:15 AM [vite] (client) hmr update /src/App.jsx, /src/pages/Login.jsx, /src/pages/Register.jsx, /src/pages/DealerDashboard.jsx, /src/components/Navbar.jsx, /src/components/DeccanWallet.jsx, /src/pages/FarmerDashboard.jsx
+10:25:31 AM [vite] (client) hmr update /src/index.css, /src/pages/FarmerDashboard.jsx, /src/pages/DealerDashboard.jsx, /src/pages/OfficerDashboard.jsx, /src/pages/GovDashboard.jsx, /src/pages/WarehousePage.jsx, /src/pages/TransportPage.jsx, /src/context/AuthContext.jsx
+10:25:31 AM [vite] (client) hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+10:25:31 AM [vite] (client) hmr update /src/App.jsx, /src/pages/Login.jsx, /src/pages/Register.jsx, /src/pages/DealerDashboard.jsx, /src/components/Navbar.jsx, /src/components/DeccanWallet.jsx, /src/pages/FarmerDashboard.jsx
+10:31:38 AM [vite] (client) hmr update /src/index.css, /src/pages/OfficerDashboard.jsx
+10:31:50 AM [vite] (client) hmr update /src/index.css, /src/pages/DealerDashboard.jsx
+10:32:08 AM [vite] (client) hmr update /src/index.css, /src/pages/DealerDashboard.jsx
+10:42:37 AM [vite] (client) [console.error] Failed to load auctions: AxiosError: Request failed with status code 500
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=cc907c10:2539:4)
+10:45:29 AM [vite] (client) hmr update /src/index.css, /src/pages/WarehousePage.jsx
+10:45:45 AM [vite] (client) hmr update /src/index.css, /src/pages/WarehousePage.jsx
+10:47:24 AM [vite] (client) hmr update /src/index.css, /src/pages/DealerDashboard.jsx
